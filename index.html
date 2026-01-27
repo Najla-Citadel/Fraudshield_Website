@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FraudShield AI | Neural Defense Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #22d3ee;
+        --secondary: #3b82f6;
+        --bg: #020408;
+        --panel: rgba(255, 255, 255, 0.03);
+        --border: rgba(34, 211, 238, 0.1);
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg);
+        color: #f1f5f9;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4, .font-heading {
+        font-family: 'Outfit', sans-serif;
+        color: #ffffff;
+      }
+
+      /* Animated Background Elements */
+      .scrolling-grid {
+        background-image: linear-gradient(to right, rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+        background-size: 50px 50px;
+        transform: perspective(500px) rotateX(25deg);
+        transform-origin: top;
+        animation: grid-move 20s linear infinite;
+      }
+
+      @keyframes grid-move {
+        0% { background-position: 0 0; }
+        100% { background-position: 0 50px; }
+      }
+
+      .neural-blob {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(120px);
+        z-index: -1;
+        opacity: 0.15;
+        animation: drift 25s infinite alternate ease-in-out;
+      }
+
+      @keyframes drift {
+        0% { transform: translate(-10%, -10%) scale(1); }
+        100% { transform: translate(20%, 20%) scale(1.2); }
+      }
+
+      /* Precision Panel Enhancements */
+      .precision-panel {
+        background: var(--panel);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .precision-panel:hover {
+        border-color: rgba(34, 211, 238, 0.4);
+        background: rgba(255, 255, 255, 0.06);
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 211, 238, 0.1);
+      }
+
+      .precision-panel::after {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: linear-gradient(45deg, transparent, rgba(34, 211, 238, 0.03), transparent);
+        transform: rotate(45deg);
+        transition: 0.8s;
+      }
+
+      .precision-panel:hover::after {
+        top: 100%;
+        left: 100%;
+      }
+
+      /* Lively Transitions */
+      .reveal-up {
+        animation: reveal-up 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+      }
+
+      @keyframes reveal-up {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .scan-line {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        top: 0;
+        left: 0;
+        animation: scan 4s linear infinite;
+        opacity: 0.3;
+      }
+
+      @keyframes scan {
+        0% { top: 0; }
+        100% { top: 100%; }
+      }
+
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: var(--bg); }
+      ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.460.0?external=react",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
