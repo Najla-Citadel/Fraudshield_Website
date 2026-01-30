@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Delete Account | FraudShield</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      background-color: #f9fafb;
+      color: #111827;
+      padding: 24px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #111827;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .warning {
+      background-color: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 16px;
+      margin: 24px 0;
+      border-radius: 4px;
+    }
+    .info-box {
+      background-color: #dbeafe;
+      border-left: 4px solid #3b82f6;
+      padding: 16px;
+      margin: 24px 0;
+      border-radius: 4px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #ef4444;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 16px 0;
+    }
+    .button:hover {
+      background-color: #dc2626;
+    }
+    .updated {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 24px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Delete Your Account</h1>
+  <p class="updated">Last updated: January 2026</p>
+
+  <div class="warning">
+    <strong>⚠️ Important:</strong> Deleting your account is permanent and cannot be undone. 
+    All your personal data will be permanently removed from our systems.
+  </div>
+
+  <h2>What Happens When You Delete Your Account</h2>
+  <p>Upon account deletion, the following data will be permanently removed:</p>
+  <ul>
+    <li>All personal information (email address, if provided)</li>
+    <li>Account credentials and authentication data</li>
+    <li>App usage history and preferences</li>
+    <li>Device information associated with your account</li>
+    <li>Any stored settings or configurations</li>
+  </ul>
+
+  <h2>Data Retention Exceptions</h2>
+  <div class="info-box">
+    <p><strong>Note:</strong> Some data may be retained for legal and compliance purposes:</p>
+    <ul>
+      <li>Transaction logs may be kept for up to 7 years as required by law</li>
+      <li>Security logs related to fraud prevention may be retained for 2 years</li>
+      <li>Anonymous, aggregated analytics data (non-identifiable) may be kept indefinitely</li>
+    </ul>
+  </div>
+
+  <h2>Deletion Process</h2>
+  <p>Follow these steps to delete your account:</p>
+  <ol>
+    <li>Click the "Delete My Account" button below</li>
+    <li>Confirm your decision in the popup dialog</li>
+    <li>Your account will be permanently deleted within 30 days</li>
+    <li>You will receive a confirmation email once the process is complete</li>
+  </ol>
+
+  <h2>Alternative: Contact Support</h2>
+  <p>If you prefer, you can also request account deletion by contacting our support team:</p>
+  <p>📧 <strong>support@fraudshield.app</strong></p>
+
+  <div style="text-align: center; margin: 40px 0;">
+    <a href="#" class="button" onclick="confirmDeletion()">Delete My Account</a>
+  </div>
+
+  <script>
+    function confirmDeletion() {
+      const confirmed = confirm(
+        "⚠️ WARNING: This action is PERMANENT.\n\n" +
+        "All your personal data will be permanently deleted and cannot be recovered.\n\n" +
+        "Are you sure you want to proceed?"
+      );
+      
+      if (confirmed) {
+        // In a real implementation, this would call your backend API
+        alert("Account deletion request has been submitted.\n\n" +
+              "Your account will be permanently deleted within 30 days.\n" +
+              "You will receive a confirmation email once the process is complete.");
+        
+        // Redirect or show success message
+        window.location.href = "privacy.html";
+      }
+    }
+  </script>
+
+  <hr style="margin: 40px 0; border: none; border-top: 1px solid #e5e7eb;">
+  
+  <p><a href="privacy.html" style="color: #3b82f6; text-decoration: none;">← Back to Privacy Policy</a></p>
+
+</body>
+</html>
