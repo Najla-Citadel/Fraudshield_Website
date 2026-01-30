@@ -132,7 +132,7 @@ export default function FraudShieldLanding() {
               2.8 million people lost money to scams last year
             </div>
 
-            <h1 className="text-7xl md:text-[6.0rem] font-black leading-[0.95] tracking-tighter text-white font-heading uppercase">
+            <h1 className="text-6xl md:text-[6.0rem] font-black leading-[0.95] tracking-tighter text-white font-heading">
               One Moment.<br />
 
             <span className="text-slate-500 whitespace-normal md:whitespace-nowrap">
