@@ -133,7 +133,7 @@ export default function FraudShieldLanding() {
             </div>
 
             <h1 className="text-6xl md:text-[6.0rem] font-black leading-[0.95] tracking-tighter text-white font-heading">
-              One Moment.<br />
+              One Moment<br />
 
             <span className="text-slate-500 whitespace-normal md:whitespace-nowrap">
               One Wrong Click.
