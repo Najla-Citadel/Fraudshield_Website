@@ -1,12 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: "export",
-  images: {
-    unoptimized: true, // REQUIRED for GitHub Pages
-  },
   basePath: "/Fraudshield_Website",
   assetPrefix: "/Fraudshield_Website/",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
