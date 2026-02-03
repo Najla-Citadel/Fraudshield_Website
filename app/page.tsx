@@ -36,22 +36,25 @@ export default function FraudShieldLanding() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setSolid(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll);
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal-up');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
+  if (typeof window === "undefined") return;
 
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-    
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  const elements = document.querySelectorAll(".scroll-reveal");
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("reveal-up");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+
+  return () => observer.disconnect();
+}, []);
+
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
