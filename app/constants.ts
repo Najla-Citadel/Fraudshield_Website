@@ -14,6 +14,9 @@ import {
   Smartphone,
   MessageSquare
 } from 'lucide-react';
+import { basePath } from "@/lib/paths";
+
+image: '${basePath}/images/vectors/phone-scam.jpg';
 
 export interface Feature {
   title: string;

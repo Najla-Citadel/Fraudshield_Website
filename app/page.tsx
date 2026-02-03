@@ -234,19 +234,20 @@ export default function FraudShieldLanding() {
 
           {/* ================= VISUAL SIDE ================= */}
           <div
-  className={`${reverse ? "md:order-1" : "md:order-2"}
-    group relative aspect-square rounded-[4rem]
-    precision-panel flex items-center justify-center overflow-hidden`}
->
-  <Image
-    src={s.image}
-    alt={s.what}
-    fill
-    sizes="(min-width: 768px) 50vw, 100vw"
-    className="object-contain p-12 opacity-80"
-  />
-</div>
-
+            className={`${reverse ? "md:order-1" : "md:order-2"}
+              group relative aspect-square rounded-[4rem] precision-panel
+              flex items-center justify-center overflow-hidden`}
+          >
+            <div className="scan-line opacity-20" />
+            <Image
+              src={s.image}
+              alt={s.what}
+              fill
+              className="object-contain p-12 opacity-80
+                transition-all duration-1000
+                group-hover:scale-110"
+            />
+          </div>
         </div>
       );
     })}
