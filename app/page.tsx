@@ -235,7 +235,7 @@ export default function FraudShieldLanding() {
           {/* ================= VISUAL SIDE ================= */}
           <div
             className={`${reverse ? "md:order-1" : "md:order-2"}
-              relative aspect-square rounded-[4rem] precision-panel
+              group relative aspect-square rounded-[4rem] precision-panel
               flex items-center justify-center overflow-hidden`}
           >
             <div className="scan-line opacity-20" />
